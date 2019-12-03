@@ -19,7 +19,7 @@ hexo.extend.filter.register('after_post_render', function(data){
 	var imgArr = getMarkdownImgs(data._content);
 	for (var i=0; i<imgArr.length; i++) {
 		// 当图片不以根目录开头时
-		if (!imgArr[i].startsWith("/")) {
+		if (!imgArr[i].src.startsWith("/")) {
 			var imgSrcPath = getRealPath(postSrcDir, imgArr[i].src);
 			var imgDestPath = getRealPath(hexo.public_dir + "/" + postDestDir, imgArr[i].src);
 			// console.log("图片源路径：" + imgSrcPath);

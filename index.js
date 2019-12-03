@@ -18,12 +18,15 @@ hexo.extend.filter.register('after_post_render', function(data){
 	// 获取markdown文本中的图片
 	var imgArr = getMarkdownImgs(data._content);
 	for (var i=0; i<imgArr.length; i++) {
-		var imgSrcPath = getRealPath(postSrcDir, imgArr[i].src);
-		var imgDestPath = getRealPath(hexo.public_dir+"/"+postDestDir, imgArr[i].src);
-		// console.log("图片源路径：" + imgSrcPath);
-		// console.log("图片目标路径：" + imgDestPath);
-		// 复制图片
-		fs.copyFile(imgSrcPath, imgDestPath);
+		// 当图片不以根目录开头时
+		if (!imgArr[i].startsWith("/")) {
+			var imgSrcPath = getRealPath(postSrcDir, imgArr[i].src);
+			var imgDestPath = getRealPath(hexo.public_dir + "/" + postDestDir, imgArr[i].src);
+			// console.log("图片源路径：" + imgSrcPath);
+			// console.log("图片目标路径：" + imgDestPath);
+			// 复制图片
+			fs.copyFile(imgSrcPath, imgDestPath);
+		}
 	}
 	return data;
 });

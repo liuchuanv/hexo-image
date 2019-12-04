@@ -1,11 +1,33 @@
 {
-  "name": "hexo-image",
-  "version": "0.0.1",
-  "description": "",
+  "_from": "git+https://github.com/liuchuanv/hexo-image.git",
+  "_id": "hexo-image@0.0.1",
+  "_inBundle": false,
+  "_location": "/hexo-image",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "git+https://github.com/liuchuanv/hexo-image.git",
+    "rawSpec": "git+https://github.com/liuchuanv/hexo-image.git",
+    "saveSpec": "git+https://github.com/liuchuanv/hexo-image.git",
+    "fetchSpec": "https://github.com/liuchuanv/hexo-image.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/liuchuanv/hexo-image.git#515c98abfe39b70448d2749735af90212c823663",
+  "_spec": "git+https://github.com/liuchuanv/hexo-image.git",
+  "_where": "E:\\MyBlog",
+  "author": "",
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "根据markdown文件中图片的相对路径，将图片部署到应用的对应位置。",
+  "license": "ISC",
   "main": "index.js",
+  "name": "hexo-image",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "version": "0.0.1"
 }

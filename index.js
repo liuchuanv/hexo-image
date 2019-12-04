@@ -39,6 +39,7 @@ hexo.extend.filter.register('after_post_render', function(data){
  * @returns {*}
  */
 function removeLastLevelDir(d) {
+	if (!d) return d;
 	var dir = d.replace(/\\/g, '/');
 	var dirArray = dir.split('/').filter(function(elem){
 		return elem != '' && elem != '.';
